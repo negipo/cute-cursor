@@ -1,0 +1,13 @@
+{
+  "name": "cute-cursor",
+  "main": "./lib/cute-cursor",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Cute Cursor",
+  "repository": "https://github.com/negipo/cute-cursor",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "atom": "*"
+  }
+}
