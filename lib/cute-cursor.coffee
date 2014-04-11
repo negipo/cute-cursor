@@ -8,7 +8,10 @@ module.exports =
 
     setInterval(->
       cursor = view.getActivePane().find('.cursor')
-      cursor.css('background-color', COLORS[colorIndex])
+      cursor.css({
+        'background-color': COLORS[colorIndex],
+        'border-left': 'none'
+        })
       colorIndex += 1
       if colorIndex >= COLORSIZE
         colorIndex = 0
