@@ -1,7 +1,7 @@
 {
   "name": "cute-cursor",
   "main": "./lib/cute-cursor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Cute Cursor",
   "repository": "https://github.com/negipo/cute-cursor",
