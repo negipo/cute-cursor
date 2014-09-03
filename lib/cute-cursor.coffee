@@ -7,7 +7,7 @@ module.exports =
     colorIndex = 0
 
     setInterval(->
-      cursor = view.getActivePane().find('.cursor')
+      cursor = view.getActivePaneView().find('.cursor')
       cursor.css('background-color', COLORS[colorIndex])
       colorIndex += 1
       if colorIndex >= COLORSIZE
