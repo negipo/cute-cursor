@@ -1,14 +1,13 @@
 COLORS = 'red green blue yellow purple magenta cyan'.split(' ')
 COLORSIZE = COLORS.length
+CUSOR_SELECTOR = 'atom-text-editor.editor .cursors .cursor'
 
 module.exports =
   activate: (state) ->
-    view = atom.workspaceView
     colorIndex = 0
-
+    cursor = document.querySelector(CUSOR_SELECTOR)
     setInterval(->
-      cursor = view.getActivePaneView().find('.cursor')
-      cursor.css('background-color', COLORS[colorIndex])
+      cursor.style['background-color'] = COLORS[colorIndex]
       colorIndex += 1
       if colorIndex >= COLORSIZE
         colorIndex = 0
