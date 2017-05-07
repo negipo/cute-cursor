@@ -1,0 +1,41 @@
+.cute-colors(@property) {
+  0%   { @{property}: red; }
+  17%  { @{property}: green; }
+  34%  { @{property}: blue; }
+  51%  { @{property}: yellow; }
+  68%  { @{property}: purple; }
+  85%  { @{property}: magenta; }
+  100% { @{property}: cyan; }
+}
+
+@keyframes cute-background {
+  .cute-colors(background-color);
+}
+
+@-webkit-keyframes cute-background {
+  .cute-colors(background-color);
+}
+
+@keyframes cute-border {
+  .cute-colors(border-color);
+}
+
+@-webkit-keyframes cute-border {
+  .cute-colors(border-color);
+}
+
+atom-text-editor.editor {
+  .cursor {
+    opacity: 1;
+    border: none;
+    animation: cute-background 120ms infinite;
+    -webkit-animation: cute-background 120ms infinite;
+  }
+
+  &.vim-mode-plus.insert-mode .cursor {
+    opacity: 1;
+    border-left: 2px solid;
+    animation: cute-border 120ms infinite;
+    -webkit-animation: cute-border 120ms infinite;
+  }
+}
